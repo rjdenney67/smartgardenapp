@@ -19,9 +19,15 @@ android {
     }
 }
 
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
 dependencies {
     compile ('com.ibm.mobilefirstplatform.clientsdk.android:core:[2.0.0,3.0.0)')
-    compile group: 'com.cloudant', name: 'cloudant-sync-datastore-android', version:'1.1.5'
+    compile group: 'com.cloudant', name: 'cloudant-sync-datastore-android', version:'latest.release'
+    compile group: 'com.cloudant', name: 'cloudant-client', version: '2.8.0'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
