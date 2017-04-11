@@ -25,14 +25,6 @@
         android:onClick="PictureClickHandler"
         android:text="PICTURE" />
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
     <Switch
         android:id="@+id/detter_enable"
         android:layout_width="wrap_content"
@@ -58,21 +50,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Light"
-        android:layout_marginBottom="31dp"
-        android:layout_above="@+id/volume_text"
+        android:layout_marginBottom="60dp"
+        android:layout_above="@+id/seekBar"
         android:layout_alignLeft="@+id/sound_enable"
         android:layout_alignStart="@+id/sound_enable" />
-
-    <EditText
-        android:id="@+id/volume_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/seekBar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="VOLUME" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -83,4 +64,25 @@
         tools:layout_width="match_parent"
         android:layout_toRightOf="@+id/detter_enable"
         android:layout_toEndOf="@+id/detter_enable" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:max="99" />
+
+    <Button
+        android:text="Save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_button"
+        android:layout_above="@+id/light_enable"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="54dp"
+        android:layout_marginEnd="54dp" />
 </RelativeLayout>
